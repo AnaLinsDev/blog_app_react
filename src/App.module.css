@@ -1,0 +1,35 @@
+.wrapper {
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+    html {
+        /*
+        Estamos usando o rem para todas as fonts na aplicação,
+        o rem é um valor relativo, portanto quando diminuimos o tamanho da font,
+        o rem irá diminuir em todos os textos.
+
+        OBS: Se colocarmos 14px puro, irá funcionar, porém se o usuário
+        alterar o tamanho da font em seu dispositivo, o site não irá se adaptar,
+        portanto é preciso que coloquemos um valor percentual  do valor do rem.
+
+        Isso pode ser feito com o calculo: 
+
+        16px = 100% = 1rem 
+        14px =  x %
+        x = 87.5%;
+        */
+        font-size: 87.5%;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
